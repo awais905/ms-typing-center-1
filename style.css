@@ -1,137 +1,51 @@
-/* ====== Global Styles ====== */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #f9f9f9;
-  line-height: 1.6;
-}
+/* Updated professional and visually attractive style for MS Typing Center website */
 
-/* ====== Header ====== */
-header {
-  background-color: #1f1f1f;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
+/* Reset and base styles */
 
-header strong {
-  color: #ffcc00;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-}
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
 
-nav a {
-  color: #e0e0e0;
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
 
-nav a:hover {
-  color: #ffcc00;
-}
+body { background: linear-gradient(120deg, #1f1c2c, #928dab); color: #f1f1f1; line-height: 1.6; }
 
-.lang-selector {
-  background-color: #292929;
-  color: #ffffff;
-  padding: 6px 10px;
-  border-radius: 4px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
+header { background-color: #1a1a2e; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); position: sticky; top: 0; z-index: 1000; }
 
-/* ====== Container ====== */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
+header h1 { color: #fff; font-size: 1.8rem; }
 
-h1, h2, h3 {
-  color: #ffcc00;
-  margin-bottom: 20px;
-  text-align: center;
-}
+nav ul { list-style: none; display: flex; flex-wrap: wrap; }
 
-ul, ol {
-  padding-left: 20px;
-}
+nav ul li { margin-left: 20px; }
 
-ul li, ol li {
-  margin-bottom: 10px;
-}
+nav ul li a { text-decoration: none; color: #ccc; font-size: 1rem; transition: color 0.3s; }
 
-/* ====== Form Styling ====== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: auto;
-}
+nav ul li a:hover, nav ul li a.active { color: #ffcc00; }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: 12px;
-  background-color: #1f1f1f;
-  border: 1px solid #444;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 1rem;
-}
+.language-selector { margin-left: 20px; background-color: #2a2a40; color: white; border: none; padding: 6px 10px; border-radius: 5px; cursor: pointer; }
 
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
+section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
 
-button[type="submit"] {
-  background-color: #ffcc00;
-  color: #000;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; color: #ffcc00; }
 
-button[type="submit"]:hover {
-  background-color: #e6b800;
-}
+p { font-size: 1.1rem; text-align: justify; margin-bottom: 1rem; }
 
-/* ====== Footer (if needed later) ====== */
-footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  margin-top: 40px;
-}
+.form-group { margin-bottom: 1rem; }
 
-/* ====== Responsive Design ====== */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
+form input, form textarea { width: 100%; padding: 12px; margin-top: 6px; background-color: #2e2e42; border: 1px solid #555; color: #fff; border-radius: 5px; }
 
-  .container {
-    padding: 20px 15px;
-  }
+form input:focus, form textarea:focus { border-color: #ffcc00; outline: none; }
 
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
+form button { background-color: #ffcc00; color: #1a1a2e; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background-color 0.3s; }
+
+form button:hover { background-color: #e6b800; }
+
+footer { background-color: #111; color: #ccc; text-align: center; padding: 1.5rem 1rem; font-size: 0.9rem; margin-top: 2rem; }
+
+.map-container { margin-top: 2rem; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); }
+
+@media screen and (max-width: 768px) { nav ul { flex-direction: column; align-items: flex-start; }
+
+nav ul li { margin: 10px 0; }
+
+header { flex-direction: column; align-items: flex-start; }
+
+.language-selector { margin: 10px 0 0 0; } }
+
