@@ -5,42 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services - MS Typing Center</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #f0f0f0;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #ff9900;
+    }
+    .lang-selector {
+      background-color: #222;
+      color: #f0f0f0;
+      padding: 5px;
+      border: none;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      color: #ff9900;
+      text-align: center;
+    }
+    ul {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <div class="navbar">
-      <h1>MS Typing Center</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+    <div><strong>MS Typing Center</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <select class="lang-selector" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="ur">اردو</option>
+        <option value="ar">العربية</option>
+      </select>
+    </nav>
   </header>
 
-  <!-- Services Section -->
-  <section>
-    <h2>Our Services</h2>
-    <ul class="services-list">
-      <li>✅ All PRO Services</li>
-      <li>✅ New Company Setup</li>
-      <li>✅ Medical and Emirates ID Typing</li>
-      <li>✅ WPS Services</li>
-      <li>✅ All Visa Services (New / Renewal)</li>
-      <li>✅ Family Visa Services</li>
-      <li>✅ Ejari Registration</li>
-      <li>✅ Tasheel & Amer Services</li>
-      <li>✅ All Emirates Covered</li>
+  <div class="container">
+    <h1 id="title">Our Services</h1>
+    <ul id="servicesList">
+      <li>Visa Typing & Application Processing</li>
+      <li>Emirates ID & Medical Typing</li>
+      <li>Tasheel & Amer Services</li>
+      <li>Company Formation & PRO Services</li>
+      <li>Attestation & Document Clearance</li>
+      <li>Translation and Notary Public Services</li>
+      <li>Immigration & Labour Department Services</li>
     </ul>
-  </section>
+  </div>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 MS Typing Center. All rights reserved.
-  </footer>
+  <script>
+    const content = {
+      en: {
+        title: "Our Services",
+        services: [
+          "Visa Typing & Application Processing",
+          "Emirates ID & Medical Typing",
+          "Tasheel & Amer Services",
+          "Company Formation & PRO Services",
+          "Attestation & Document Clearance",
+          "Translation and Notary Public Services",
+          "Immigration & Labour Department Services"
+        ]
+      },
+      ur: {
+        title: "ہماری خدمات",
+        services: [
+          "ویزا ٹائپنگ اور درخواست کی پروسیسنگ",
+          "ایمریٹس آئی ڈی اور میڈیکل ٹائپنگ",
+          "تسھیل اور عامر سروسز",
+          "کمپنی کی تشکیل اور PRO سروسز",
+          "تصدیق اور دستاویزات کی کلیئرنس",
+          "ترجمہ اور نوٹری پبلک سروسز",
+          "امیگریشن اور لیبر ڈیپارٹمنٹ کی خدمات"
+        ]
+      },
+      ar: {
+        title: "خدماتنا",
+        services: [
+          "طباعة التأشيرات ومعالجة الطلبات",
+          "طباعة الهوية الإماراتية والفحوصات الطبية",
+          "خدمات تسهيل وأمر",
+          "تأسيس الشركات وخدمات PRO",
+          "تصديق المستندات وتخليصها",
+          "الترجمة وخدمات كاتب العدل",
+          "خدمات الهجرة والعمل"
+        ]
+      }
+    };
 
+    function changeLanguage(lang) {
+      document.getElementById("title").innerText = content[lang].title;
+      const servicesList = document.getElementById("servicesList");
+      servicesList.innerHTML = "";
+      content[lang].services.forEach(service => {
+        const li = document.createElement("li");
+        li.textContent = service;
+        servicesList.appendChild(li);
+      });
+    }
+  </script>
 </body>
 </html>
