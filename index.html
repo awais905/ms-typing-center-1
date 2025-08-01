@@ -2,203 +2,225 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MS Typing Center offers professional visa, passport, and documentation services in Muzaffargarh with expert guidance and fast support." />
+  <meta name="keywords" content="MS Typing Center, Visa Services, Passport Help, Documentation Services, Muzaffargarh, Attestation, NADRA, Translation" />
+  <meta name="author" content="MS Typing Center" />
+  <meta property="og:title" content="MS Typing Center - Visa & Documentation Services">
+  <meta property="og:description" content="Professional visa and documentation help in Muzaffargarh. Get expert assistance for all your paperwork.">
+  <meta property="og:image" content="your-logo.png">
+  <meta property="og:type" content="website">
   <title>MS Typing Center</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
-    /* Reset & Base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
     }
+
     body {
-      background: #111;
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
     }
+
     header {
       background-color: #1f1f1f;
-      padding: 1rem 2rem;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #333;
     }
+
     .logo {
-      font-size: 1.6rem;
+      font-size: 24px;
       font-weight: bold;
-      color: #00d9ff;
+      color: #ffc107;
     }
+
     nav ul {
       list-style: none;
       display: flex;
-      gap: 2rem;
+      gap: 25px;
     }
+
     nav ul li a {
+      color: #ccc;
       text-decoration: none;
-      color: #ddd;
-      font-size: 1rem;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
+
     nav ul li a:hover {
-      color: #00d9ff;
+      color: #ffc107;
     }
+
     .lang-switcher select {
       padding: 5px;
-      background: #222;
-      color: #fff;
-      border: 1px solid #444;
       border-radius: 5px;
-    }
-
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #00d9ff;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-
-    .testimonials {
-      padding: 3rem 2rem;
-      background-color: #1a1a1a;
-    }
-    .testimonials h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #00d9ff;
-      margin-bottom: 2rem;
-    }
-    .testimonial-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .testimonial {
-      background-color: #222;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #000;
-      text-align: center;
-    }
-    .testimonial img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    .testimonial p {
-      font-size: 0.95rem;
-      color: #ccc;
-      margin-bottom: 0.5rem;
-    }
-    .testimonial h4 {
+      border: none;
+      background-color: #292929;
       color: #fff;
-      font-size: 1rem;
-      margin-top: 0.5rem;
+    }
+
+    section.hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    section.testimonials {
+      padding: 60px 20px;
+      background-color: #1a1a1a;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 36px;
+      color: #ffc107;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background-color: #2a2a2a;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .testimonial-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .testimonial-card h3 {
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-card p {
+      font-size: 14px;
+      color: #ccc;
     }
 
     footer {
+      background-color: #111;
+      padding: 20px;
       text-align: center;
-      padding: 1rem;
-      background: #111;
       color: #777;
-      font-size: 0.9rem;
-      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo" data-lang="logo">MS Typing Center</div>
+    <div class="logo">MS Typing Center</div>
     <nav>
       <ul>
-        <li><a href="index.html" data-lang="home">Home</a></li>
-        <li><a href="about.html" data-lang="about">About</a></li>
-        <li><a href="services.html" data-lang="services">Services</a></li>
-        <li><a href="contact.html" data-lang="contact">Contact</a></li>
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="about.html" id="nav-about">About</a></li>
+        <li><a href="services.html" id="nav-services">Services</a></li>
+        <li><a href="contact.html" id="nav-contact">Contact</a></li>
       </ul>
     </nav>
     <div class="lang-switcher">
-      <select onchange="changeLanguage(this.value)">
-        <option value="en">🌐 English</option>
+      <select onchange="switchLanguage(this.value)">
+        <option value="en">English</option>
         <option value="ur">اردو</option>
+        <option value="ar">العربية</option>
       </select>
     </div>
   </header>
 
   <section class="hero">
-    <h1 data-lang="welcome">Welcome to MS Typing Center</h1>
-    <p data-lang="tagline">We provide professional visa & document services.</p>
+    <h1 id="hero-title">Welcome to MS Typing Center</h1>
+    <p id="hero-description">Expert solutions for all your visa and documentation needs in Muzaffargarh.</p>
   </section>
 
   <section class="testimonials">
-    <h2 data-lang="reviews">Client Reviews</h2>
-    <div class="testimonial-container">
-      <div class="testimonial">
-        <img src="https://i.pravatar.cc/60?img=1" alt="Client 1">
-        <p data-lang="client1">Excellent service and quick turnaround. Highly recommend!</p>
-        <h4>Ahmed Khan</h4>
+    <h2 id="testimonial-heading">What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1">
+        <h3>Ali Raza</h3>
+        <p>"Very professional and helpful. Got my passport work done smoothly!"</p>
       </div>
-      <div class="testimonial">
-        <img src="https://i.pravatar.cc/60?img=2" alt="Client 2">
-        <p data-lang="client2">Very cooperative and reliable. Best in town!</p>
-        <h4>Sara Malik</h4>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 2">
+        <h3>Sana Ahmed</h3>
+        <p>"Highly recommend MS Typing Center for visa-related services. Fast and reliable."</p>
       </div>
-      <div class="testimonial">
-        <img src="https://i.pravatar.cc/60?img=3" alt="Client 3">
-        <p data-lang="client3">پیشہ ورانہ خدمات، بروقت ڈیلیوری۔</p>
-        <h4>فیضان علی</h4>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Client 3">
+        <h3>Hamza Khan</h3>
+        <p>"Excellent support and friendly staff. They helped me with attestation work perfectly."</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 MS Typing Center. All rights reserved.</p>
+    &copy; 2025 MS Typing Center. All rights reserved.
   </footer>
 
   <script>
     const translations = {
-      ur: {
-        logo: "ایم ایس ٹائپنگ سینٹر",
-        home: "ہوم",
-        about: "ہمارے بارے میں",
-        services: "سروسز",
-        contact: "رابطہ کریں",
-        welcome: "ایم ایس ٹائپنگ سینٹر میں خوش آمدید",
-        tagline: "ہم پیشہ ورانہ ویزا اور دستاویزات کی خدمات فراہم کرتے ہیں۔",
-        reviews: "کلائنٹس کی رائے",
-        client1: "بہترین سروس اور فوری فراہمی۔ بہت عمدہ!",
-        client2: "بہت مددگار اور قابلِ اعتماد۔ شہر میں بہترین!",
-        client3: "پیشہ ورانہ خدمات، بروقت ڈیلیوری۔"
-      },
       en: {
-        logo: "MS Typing Center",
-        home: "Home",
-        about: "About",
-        services: "Services",
-        contact: "Contact",
-        welcome: "Welcome to MS Typing Center",
-        tagline: "We provide professional visa & document services.",
-        reviews: "Client Reviews",
-        client1: "Excellent service and quick turnaround. Highly recommend!",
-        client2: "Very cooperative and reliable. Best in town!",
-        client3: "Professional services, timely delivery."
+        "nav-home": "Home",
+        "nav-about": "About",
+        "nav-services": "Services",
+        "nav-contact": "Contact",
+        "hero-title": "Welcome to MS Typing Center",
+        "hero-description": "Expert solutions for all your visa and documentation needs in Muzaffargarh.",
+        "testimonial-heading": "What Our Clients Say"
+      },
+      ur: {
+        "nav-home": "ہوم",
+        "nav-about": "ہمارے بارے میں",
+        "nav-services": "خدمات",
+        "nav-contact": "رابطہ کریں",
+        "hero-title": "ایم ایس ٹائپنگ سینٹر میں خوش آمدید",
+        "hero-description": "مظفرگڑھ میں آپ کی ویزا اور دستاویزی ضروریات کے لیے ماہر حل۔",
+        "testimonial-heading": "ہمارے کلائنٹس کی رائے"
+      },
+      ar: {
+        "nav-home": "الصفحة الرئيسية",
+        "nav-about": "معلومات عنا",
+        "nav-services": "الخدمات",
+        "nav-contact": "اتصل بنا",
+        "hero-title": "مرحبًا بكم في مركز إم إس للطباعة",
+        "hero-description": "حلول احترافية لجميع احتياجات التأشيرات والوثائق الخاصة بك في مظفرغره.",
+        "testimonial-heading": "آراء عملائنا"
       }
     };
 
-    function changeLanguage(lang) {
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        const key = el.getAttribute('data-lang');
-        el.textContent = translations[lang][key];
+    function switchLanguage(lang) {
+      const elements = document.querySelectorAll('[id]');
+      elements.forEach(el => {
+        const key = el.id;
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
       });
+      document.documentElement.lang = lang;
     }
   </script>
 </body>
