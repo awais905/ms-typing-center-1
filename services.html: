@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - MS Typing Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">MS Typing Center</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Our Services</h1>
+      <p>Providing Reliable Visa & Document Solutions</p>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <div class="service-card">
+        <h2>Visa Services</h2>
+        <p>Expert guidance for visit, study, and work visas for UAE, Malaysia, Qatar, and more.</p>
+      </div>
+      <div class="service-card">
+        <h2>Document Typing</h2>
+        <p>Professional Urdu & English typing for affidavits, agreements, applications, and more.</p>
+      </div>
+      <div class="service-card">
+        <h2>Legal Documents</h2>
+        <p>Marriage Certificates, Birth Certificates, Divorce Papers, and related legal documentation.</p>
+      </div>
+      <div class="service-card">
+        <h2>Online Services</h2>
+        <p>FRC, NADRA, B-form, CNIC Correction, Vaccination Certificates, and online registrations.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MS Typing Center. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
