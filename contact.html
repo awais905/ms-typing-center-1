@@ -7,52 +7,44 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>MS Typing Center</h1>
-    <nav>
+    <div class="navbar">
+      <h1>MS Typing Center</h1>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
-  <main class="contact-container">
+  <!-- Contact Info -->
+  <section>
     <h2>Contact Us</h2>
-    
-    <div class="contact-info">
-      <p><strong>WhatsApp:</strong> 
-        <a href="https://wa.me/971567906759" target="_blank">+971 56 790 6759</a>
-      </p>
-      <p><strong>Call:</strong> 
-        <a href="tel:0567906759">0567906759</a>
-      </p>
-      <p><strong>Email:</strong> 
-        <a href="mailto:junaidazizmstyping2@gmail.com">junaidazizmstyping2@gmail.com</a>
-      </p>
-    </div>
+    <p>📞 <strong>WhatsApp:</strong> <a href="https://wa.me/971567906759" target="_blank">+971 56 790 6759</a></p>
+    <p>📱 <strong>Call:</strong> <a href="tel:0567906759">0567906759</a></p>
+    <p>📧 <strong>Email:</strong> <a href="mailto:junaidazizmstyping2@gmail.com">junaidazizmstyping2@gmail.com</a></p>
+  </section>
 
-    <form class="contact-form" action="#" method="post">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required />
-
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required />
-
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" placeholder="Your number" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-
+  <!-- Contact Form -->
+  <section>
+    <h2>Send Us a Message</h2>
+    <form action="#" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="contact" placeholder="Your Contact Number" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-  </main>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 MS Typing Center. All rights reserved.</p>
+    &copy; 2025 MS Typing Center. All rights reserved.
   </footer>
+
 </body>
 </html>
