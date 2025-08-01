@@ -1,128 +1,205 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MS Typing Center</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <style>
+    /* Reset & Base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
     body {
-      background-color: #111;
+      background: #111;
       color: #fff;
-      line-height: 1.6;
     }
     header {
-      background: #1a1a1a;
-      padding: 20px 40px;
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 2px solid #333;
     }
     .logo {
-      font-size: 24px;
+      font-size: 1.6rem;
       font-weight: bold;
-      color: #f4c430;
+      color: #00d9ff;
     }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
       text-decoration: none;
-      font-weight: bold;
+      color: #ddd;
+      font-size: 1rem;
+      transition: color 0.3s;
     }
-    nav a:hover {
-      color: #f4c430;
+    nav ul li a:hover {
+      color: #00d9ff;
     }
     .lang-switcher select {
-      background-color: #1a1a1a;
+      padding: 5px;
+      background: #222;
       color: #fff;
-      border: 1px solid #f4c430;
-      padding: 5px 10px;
+      border: 1px solid #444;
       border-radius: 5px;
     }
-    .container {
-      padding: 40px;
+
+    .hero {
+      padding: 4rem 2rem;
       text-align: center;
     }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #00d9ff;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
     .testimonials {
-      background: #222;
-      padding: 40px 20px;
-      border-radius: 10px;
-      margin-top: 40px;
+      padding: 3rem 2rem;
+      background-color: #1a1a1a;
+    }
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #00d9ff;
+      margin-bottom: 2rem;
+    }
+    .testimonial-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
     }
     .testimonial {
-      margin-bottom: 20px;
-      padding: 20px;
-      border: 1px solid #f4c430;
+      background-color: #222;
+      padding: 1.5rem;
       border-radius: 10px;
-    }
-    footer {
-      background: #1a1a1a;
+      box-shadow: 0 0 10px #000;
       text-align: center;
-      padding: 20px;
-      color: #aaa;
-      margin-top: 40px;
+    }
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .testimonial p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+    }
+    .testimonial h4 {
+      color: #fff;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo" id="logo">MS Typing Center</div>
+    <div class="logo" data-lang="logo">MS Typing Center</div>
     <nav>
-      <a href="index.html" id="nav-home">Home</a>
-      <a href="about.html" id="nav-about">About</a>
-      <a href="services.html" id="nav-services">Services</a>
-      <a href="contact.html" id="nav-contact">Contact</a>
+      <ul>
+        <li><a href="index.html" data-lang="home">Home</a></li>
+        <li><a href="about.html" data-lang="about">About</a></li>
+        <li><a href="services.html" data-lang="services">Services</a></li>
+        <li><a href="contact.html" data-lang="contact">Contact</a></li>
+      </ul>
     </nav>
     <div class="lang-switcher">
-      <select id="language-select">
-        <option value="en">English</option>
+      <select onchange="changeLanguage(this.value)">
+        <option value="en">🌐 English</option>
         <option value="ur">اردو</option>
       </select>
     </div>
-  </header>  <div class="container">
-    <h1 id="welcome-title">Welcome to MS Typing Center</h1>
-    <p id="welcome-text">We provide professional visa, documentation, and typing services tailored to your needs.</p><div class="testimonials">
-  <h2 id="testimonials-title">What Our Clients Say</h2>
-  <div class="testimonial" id="testimonial-1">"Fast and reliable service! Highly recommend."</div>
-  <div class="testimonial" id="testimonial-2">"Very professional and always on time. Great support for all my document needs."</div>
-</div>
+  </header>
 
-  </div>  <footer>
-    <p id="footer-text">&copy; 2025 MS Typing Center. All rights reserved.</p>
-  </footer>  <script>
+  <section class="hero">
+    <h1 data-lang="welcome">Welcome to MS Typing Center</h1>
+    <p data-lang="tagline">We provide professional visa & document services.</p>
+  </section>
+
+  <section class="testimonials">
+    <h2 data-lang="reviews">Client Reviews</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <img src="https://i.pravatar.cc/60?img=1" alt="Client 1">
+        <p data-lang="client1">Excellent service and quick turnaround. Highly recommend!</p>
+        <h4>Ahmed Khan</h4>
+      </div>
+      <div class="testimonial">
+        <img src="https://i.pravatar.cc/60?img=2" alt="Client 2">
+        <p data-lang="client2">Very cooperative and reliable. Best in town!</p>
+        <h4>Sara Malik</h4>
+      </div>
+      <div class="testimonial">
+        <img src="https://i.pravatar.cc/60?img=3" alt="Client 3">
+        <p data-lang="client3">پیشہ ورانہ خدمات، بروقت ڈیلیوری۔</p>
+        <h4>فیضان علی</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MS Typing Center. All rights reserved.</p>
+  </footer>
+
+  <script>
     const translations = {
       ur: {
-        "logo": "ایم ایس ٹائپنگ سینٹر",
-        "nav-home": "ہوم",
-        "nav-about": "تعارف",
-        "nav-services": "سروسز",
-        "nav-contact": "رابطہ کریں",
-        "welcome-title": "ایم ایس ٹائپنگ سینٹر میں خوش آمدید",
-        "welcome-text": "ہم آپ کی ضروریات کے مطابق ویزا، دستاویزات اور ٹائپنگ کی خدمات فراہم کرتے ہیں۔",
-        "testimonials-title": "ہمارے کلائنٹس کی رائے",
-        "testimonial-1": "\"تیز اور قابل اعتماد سروس! انتہائی سفارش کی جاتی ہے۔\"",
-        "testimonial-2": "\"بہت پیشہ ور اور ہمیشہ وقت پر۔ تمام دستاویزات کے لیے بہترین سپورٹ۔\"",
-        "footer-text": "© 2025 ایم ایس ٹائپنگ سینٹر. جملہ حقوق محفوظ ہیں۔"
+        logo: "ایم ایس ٹائپنگ سینٹر",
+        home: "ہوم",
+        about: "ہمارے بارے میں",
+        services: "سروسز",
+        contact: "رابطہ کریں",
+        welcome: "ایم ایس ٹائپنگ سینٹر میں خوش آمدید",
+        tagline: "ہم پیشہ ورانہ ویزا اور دستاویزات کی خدمات فراہم کرتے ہیں۔",
+        reviews: "کلائنٹس کی رائے",
+        client1: "بہترین سروس اور فوری فراہمی۔ بہت عمدہ!",
+        client2: "بہت مددگار اور قابلِ اعتماد۔ شہر میں بہترین!",
+        client3: "پیشہ ورانہ خدمات، بروقت ڈیلیوری۔"
       },
       en: {
-        // default language values already in HTML
+        logo: "MS Typing Center",
+        home: "Home",
+        about: "About",
+        services: "Services",
+        contact: "Contact",
+        welcome: "Welcome to MS Typing Center",
+        tagline: "We provide professional visa & document services.",
+        reviews: "Client Reviews",
+        client1: "Excellent service and quick turnaround. Highly recommend!",
+        client2: "Very cooperative and reliable. Best in town!",
+        client3: "Professional services, timely delivery."
       }
     };
 
-    document.getElementById("language-select").addEventListener("change", function () {
-      const selectedLang = this.value;
-      const elementsToTranslate = Object.keys(translations.ur);
-      elementsToTranslate.forEach(id => {
-        const el = document.getElementById(id);
-        if (el && translations[selectedLang][id]) {
-          el.innerHTML = translations[selectedLang][id];
-        }
+    function changeLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.getAttribute('data-lang');
+        el.textContent = translations[lang][key];
       });
-    });
-  </script></body>
+    }
+  </script>
+</body>
 </html>
