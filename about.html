@@ -5,40 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About - MS Typing Center</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #f0f0f0;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #ff9900;
+    }
+    .lang-selector {
+      background-color: #222;
+      color: #f0f0f0;
+      padding: 5px;
+      border: none;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      color: #ff9900;
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <div class="navbar">
-      <h1>MS Typing Center</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+    <div><strong>MS Typing Center</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <select class="lang-selector" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="ur">اردو</option>
+        <option value="ar">العربية</option>
+      </select>
+    </nav>
   </header>
 
-  <!-- About Section -->
-  <section>
-    <h2>About Us</h2>
-    <p>
-      MS Typing Center is a trusted name in the UAE for visa processing, Emirates ID services,
-      and professional documentation support. With a commitment to quality and customer satisfaction,
-      we have helped countless individuals and businesses with reliable and fast services.
+  <div class="container">
+    <h1 id="title">About Us</h1>
+    <p id="desc">
+      Welcome to MS Typing Center, your reliable partner for all visa, document, and typing services. With professional expertise and commitment, we ensure the highest service quality in Dubai, covering all Emirates. We provide services including company setup, visa typing, medical & Emirates ID processing, Tasheel, Amer services, and much more.
     </p>
-    <p>
-      Our experienced team is equipped with the latest tools and industry knowledge to handle
-      all types of documentation services efficiently and professionally.
-    </p>
-  </section>
+  </div>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 MS Typing Center. All rights reserved.
-  </footer>
+  <script>
+    const content = {
+      en: {
+        title: "About Us",
+        desc: "Welcome to MS Typing Center, your reliable partner for all visa, document, and typing services. With professional expertise and commitment, we ensure the highest service quality in Dubai, covering all Emirates. We provide services including company setup, visa typing, medical & Emirates ID processing, Tasheel, Amer services, and much more."
+      },
+      ur: {
+        title: "ہمارے بارے میں",
+        desc: "MS ٹائپنگ سینٹر میں خوش آمدید، جو دبئی میں ویزا، دستاویزات اور ٹائپنگ سروسز کا قابلِ اعتماد مرکز ہے۔ ہم تمام امارات کا احاطہ کرتے ہوئے اعلیٰ معیار کی خدمات فراہم کرتے ہیں، جیسے نئی کمپنی کا قیام، ویزا ٹائپنگ، میڈیکل اور ایمریٹس آئی ڈی پراسیسنگ، تسھیل اور عامر سروسز وغیرہ۔"
+      },
+      ar: {
+        title: "معلومات عنا",
+        desc: "مرحبًا بكم في مركز MS للطباعة، شريككم الموثوق لجميع خدمات التأشيرات والمستندات والطباعة. نحن نقدم أفضل جودة للخدمة في دبي، بما في ذلك إعداد الشركات الجديدة، خدمات التأشيرات، المعاملات الطبية وهوية الإمارات، وخدمات تسهيل وأمر، وغيرها."
+      }
+    };
 
+    function changeLanguage(lang) {
+      document.getElementById("title").innerText = content[lang].title;
+      document.getElementById("desc").innerText = content[lang].desc;
+    }
+  </script>
 </body>
 </html>
