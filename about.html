@@ -1,96 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - MS Typing Center</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0e0e0e;
-      color: #f0f0f0;
-    }
-    header {
-      background-color: #1a1a1a;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: #f0f0f0;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: #ff9900;
-    }
-    .lang-selector {
-      background-color: #222;
-      color: #f0f0f0;
-      padding: 5px;
-      border: none;
-    }
-    .container {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h1 {
-      color: #ff9900;
-      text-align: center;
-    }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div><strong>MS Typing Center</strong></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <select class="lang-selector" onchange="changeLanguage(this.value)">
-        <option value="en">English</option>
-        <option value="ur">اردو</option>
-        <option value="ar">العربية</option>
-      </select>
-    </nav>
-  </header>
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - MS Typing Center</title>
+    <link rel="stylesheet" href="style.css">
+</head><body>
+    <header>
+        <div class="container">
+            <h1>MS Typing Center</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <select id="languageSwitcher" onchange="switchLanguage()">
+                            <option value="en">English</option>
+                            <option value="ur">اردو</option>
+                            <option value="ar">العربية</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header><main class="container">
+    <section id="about" class="lang en">
+        <h2>About Us</h2>
+        <p>MS Typing Center is a professional typing and documentation service provider based in Al Qusais Industrial Area, Dubai. We offer a wide range of visa and government-related services across all Emirates.</p>
+    </section>
 
-  <div class="container">
-    <h1 id="title">About Us</h1>
-    <p id="desc">
-      Welcome to MS Typing Center, your reliable partner for all visa, document, and typing services. With professional expertise and commitment, we ensure the highest service quality in Dubai, covering all Emirates. We provide services including company setup, visa typing, medical & Emirates ID processing, Tasheel, Amer services, and much more.
-    </p>
-  </div>
+    <section id="about" class="lang ur" style="display:none;">
+        <h2>ہمارے بارے میں</h2>
+        <p>ایم ایس ٹائپنگ سینٹر دبئی کے القصیص صنعتی علاقے میں قائم ایک پیشہ ور ٹائپنگ اور دستاویزی خدمات فراہم کرنے والا مرکز ہے۔ ہم تمام امارات میں ویزا اور حکومتی خدمات فراہم کرتے ہیں۔</p>
+    </section>
 
-  <script>
-    const content = {
-      en: {
-        title: "About Us",
-        desc: "Welcome to MS Typing Center, your reliable partner for all visa, document, and typing services. With professional expertise and commitment, we ensure the highest service quality in Dubai, covering all Emirates. We provide services including company setup, visa typing, medical & Emirates ID processing, Tasheel, Amer services, and much more."
-      },
-      ur: {
-        title: "ہمارے بارے میں",
-        desc: "MS ٹائپنگ سینٹر میں خوش آمدید، جو دبئی میں ویزا، دستاویزات اور ٹائپنگ سروسز کا قابلِ اعتماد مرکز ہے۔ ہم تمام امارات کا احاطہ کرتے ہوئے اعلیٰ معیار کی خدمات فراہم کرتے ہیں، جیسے نئی کمپنی کا قیام، ویزا ٹائپنگ، میڈیکل اور ایمریٹس آئی ڈی پراسیسنگ، تسھیل اور عامر سروسز وغیرہ۔"
-      },
-      ar: {
-        title: "معلومات عنا",
-        desc: "مرحبًا بكم في مركز MS للطباعة، شريككم الموثوق لجميع خدمات التأشيرات والمستندات والطباعة. نحن نقدم أفضل جودة للخدمة في دبي، بما في ذلك إعداد الشركات الجديدة، خدمات التأشيرات، المعاملات الطبية وهوية الإمارات، وخدمات تسهيل وأمر، وغيرها."
-      }
-    };
+    <section id="about" class="lang ar" style="display:none;">
+        <h2>معلومات عنا</h2>
+        <p>مركز إم إس للطباعة هو مقدم خدمات طباعة و توثيق محترف يقع في منطقة القصيص الصناعية بدبي. نحن نقدم مجموعة واسعة من خدمات التأشيرات والخدمات الحكومية في جميع الإمارات.</p>
+    </section>
+</main>
 
-    function changeLanguage(lang) {
-      document.getElementById("title").innerText = content[lang].title;
-      document.getElementById("desc").innerText = content[lang].desc;
+<script>
+    function switchLanguage() {
+        var lang = document.getElementById('languageSwitcher').value;
+        document.querySelectorAll('.lang').forEach(el => {
+            el.style.display = 'none';
+        });
+        document.querySelector('.lang.' + lang).style.display = 'block';
     }
-  </script>
-</body>
-</html>
+</script>
+
+</body></html>
