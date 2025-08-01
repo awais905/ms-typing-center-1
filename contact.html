@@ -1,112 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact - MS Typing Center</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | MS Typing Center</title>
   <style>
     body {
-      background-color: #121212;
-      color: #ffffff;
+      margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
     }
     header {
-      background-color: #1e1e1e;
-      padding: 20px;
-      text-align: center;
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
     }
     nav a {
-      color: #f0a500;
-      margin: 0 15px;
+      color: #ffcc00;
       text-decoration: none;
+      margin: 0 1rem;
       font-weight: bold;
     }
+    .language-switcher {
+      background-color: #1a1a1a;
+      color: white;
+      border: 1px solid #ffcc00;
+      padding: 0.4rem;
+      font-size: 1rem;
+    }
     h1, h2 {
-      color: #f0a500;
+      text-align: center;
+      color: #ffcc00;
     }
-    .contact-container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-    .contact-info a {
-      display: block;
-      color: #00ffcc;
-      margin: 10px 0;
-      font-size: 18px;
+    .contact-info, .contact-form, iframe {
+      max-width: 600px;
+      margin: 1rem auto;
+      background-color: #1f1f1f;
+      padding: 1rem;
+      border-radius: 8px;
     }
     .contact-form input, .contact-form textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-      border: none;
+      padding: 0.7rem;
+      margin-top: 0.5rem;
+      background-color: #0d0d0d;
+      border: 1px solid #444;
+      color: #fff;
     }
     .contact-form button {
-      background-color: #f0a500;
-      color: #000;
-      padding: 10px 20px;
+      padding: 0.6rem 1rem;
+      background-color: #ffcc00;
       border: none;
-      border-radius: 5px;
-      margin-top: 10px;
       cursor: pointer;
+      margin-top: 1rem;
+      font-weight: bold;
     }
-    iframe {
-      margin-top: 30px;
-      border-radius: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #1e1e1e;
-      margin-top: 40px;
-      color: #aaa;
+    .contact-links a {
+      display: block;
+      color: #00bfff;
+      margin: 0.5rem 0;
+      word-break: break-word;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>MS Typing Center</h1>
+    <div style="color:#ffcc00; font-size:1.5rem;">MS Typing Center</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-en="Home" data-ur="ہوم" data-ar="الصفحة الرئيسية">Home</a>
+      <a href="about.html" data-en="About" data-ur="ہمارے بارے میں" data-ar="معلومات عنا">About</a>
+      <a href="services.html" data-en="Services" data-ur="خدمات" data-ar="الخدمات">Services</a>
+      <a href="contact.html" data-en="Contact" data-ur="رابطہ" data-ar="اتصال">Contact</a>
     </nav>
+    <select class="language-switcher" onchange="switchLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="ur">اردو</option>
+      <option value="ar">العربية</option>
+    </select>
   </header>
 
-  <section class="contact-container">
-    <h2>Contact Us</h2>
-    <div class="contact-info">
-      <a href="https://wa.me/971567906759" target="_blank">📱 WhatsApp: +971 56 790 6759</a>
-      <a href="tel:0567906759">📞 Call: 0567906759</a>
-      <a href="mailto:junaidazizmstyping2@gmail.com">📧 Email: junaidazizmstyping2@gmail.com</a>
+  <h1 data-en="Contact Us" data-ur="ہم سے رابطہ کریں" data-ar="اتصل بنا">Contact Us</h1>
+
+  <div class="contact-info">
+    <h2 data-en="Get in Touch" data-ur="رابطہ کریں" data-ar="تواصل معنا">Get in Touch</h2>
+    <div class="contact-links">
+      <a href="tel:+971567906759" data-en="Call: 0567906759" data-ur="کال: 0567906759" data-ar="اتصال: 0567906759">Call: 0567906759</a>
+      <a href="https://wa.me/971567906759" target="_blank" data-en="WhatsApp: +971 56 790 6759" data-ur="واٹس ایپ: +971 56 790 6759" data-ar="واتساب: +971 56 790 6759">WhatsApp: +971 56 790 6759</a>
+      <a href="mailto:junaidazizmstyping2@gmail.com" data-en="Email: junaidazizmstyping2@gmail.com" data-ur="ای میل: junaidazizmstyping2@gmail.com" data-ar="البريد الإلكتروني: junaidazizmstyping2@gmail.com">Email: junaidazizmstyping2@gmail.com</a>
     </div>
+  </div>
 
-    <h2>Send a Message</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Your Contact Number" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
+  <div class="contact-form">
+    <h2 data-en="Send a Message" data-ur="پیغام بھیجیں" data-ar="أرسل رسالة">Send a Message</h2>
+    <form>
+      <label data-en="Name" data-ur="نام" data-ar="الاسم">Name</label>
+      <input type="text" placeholder="Your Name" />
+      <label data-en="Email" data-ur="ای میل" data-ar="البريد الإلكتروني">Email</label>
+      <input type="email" placeholder="Your Email" />
+      <label data-en="Message" data-ur="پیغام" data-ar="رسالة">Message</label>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit" data-en="Send" data-ur="ارسال کریں" data-ar="إرسال">Send</button>
     </form>
+  </div>
 
-    <h2>Our Location</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.1822033406225!2d55.37252927534509!3d25.278378928784195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5c0e70b4e8b7%3A0x35e24c1afef3ac5e!2sAl%20Qusais%20Industrial%20Area%20-%20Al%20Qusais%20Industrial%20Area%203%20-%20Dubai!5e0!3m2!1sen!2sae!4v1722426744770!5m2!1sen!2sae" 
-      width="100%" 
-      height="300" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
+  <iframe
+    src="https://www.google.com/maps?q=Al%20Qusais%20Industrial%20AreaAl%20-%2079VV+86W%20-%20%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B5%20%D9%85%D9%86%D8%B7%D9%82%D8%A9%20%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9%20-%20%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B5%20%D9%85%D9%86%D8%B7%D9%82%D8%A9%20%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9%20%D9%A3%20-%20%D8%AF%D8%A8%D9%8A%20-%20United%20Arab%20Emirates&output=embed"
+    width="100%"
+    height="400"
+    style="border:0; margin-top:1rem;"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
 
-  <footer>
-    &copy; 2025 MS Typing Center. All Rights Reserved.
-  </footer>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll("[data-en]").forEach((el) => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
 </body>
 </html>
