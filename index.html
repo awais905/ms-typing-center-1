@@ -2,67 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MS Typing Center</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #f5f5f5;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #ff9800;
+    }
+    .lang-switcher {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 0.4rem 0.6rem;
+      font-size: 1rem;
+    }
+    section {
+      padding: 2rem;
+    }
+    .lang-content {
+      display: none;
+    }
+    .lang-content.active {
+      display: block;
+    }
+    h1 {
+      color: #ff9800;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 class="logo">MS Typing Center</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-        <select class="language-switcher" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ur">اردو</option>
-          <option value="ar">العربية</option>
-        </select>
-      </nav>
-    </div>
+    <div><strong>MS Typing Center</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="services.html">Services</a>
+      <select class="lang-switcher" onchange="switchLang(this.value)">
+        <option value="en">English</option>
+        <option value="ur">اردو</option>
+        <option value="ar">العربية</option>
+      </select>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Welcome to MS Typing Center</h2>
-      <p>Your trusted partner for visa, PRO, and documentation services in the UAE.</p>
-      <a href="services.html" class="btn">Explore Services</a>
+  <section>
+    <div id="en" class="lang-content active">
+      <h1>Welcome to MS Typing Center</h1>
+      <p>We provide visa and documentation services with 100% customer satisfaction. Fast, reliable, and professional services across all Emirates.</p>
+    </div>
+    <div id="ur" class="lang-content">
+      <h1>ایم ایس ٹائپنگ سینٹر میں خوش آمدید</h1>
+      <p>ہم ویزا اور دستاویزات کی خدمات 100٪ کسٹمر اطمینان کے ساتھ فراہم کرتے ہیں۔ تمام امارات میں تیز، قابل اعتماد اور پیشہ ورانہ خدمات۔</p>
+    </div>
+    <div id="ar" class="lang-content">
+      <h1>مرحبًا بكم في مركز إم إس للطباعة</h1>
+      <p>نحن نقدم خدمات التأشيرات والوثائق مع رضا العملاء بنسبة 100٪. خدمات سريعة وموثوقة ومهنية في جميع الإمارات.</p>
     </div>
   </section>
-
-  <section class="features">
-    <div class="container">
-      <div class="feature-box">
-        <h3>Visa & Emirates ID Services</h3>
-        <p>Complete support for new, renewal, and family visa typing and Emirates ID registration.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Company Setup & PRO</h3>
-        <p>New company formation, WPS services, Ejari registration, and all PRO solutions.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Tasheel & Amer</h3>
-        <p>Efficient handling of government-related services through Tasheel and Amer platforms.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 MS Typing Center. All rights reserved.</p>
-    </div>
-  </footer>
 
   <script>
-    function changeLanguage(lang) {
-      // Placeholder for real language switch
-      alert("Language switched to: " + lang);
-      // Later, you can load separate HTML content or use i18n libraries.
+    function switchLang(lang) {
+      const contents = document.querySelectorAll('.lang-content');
+      contents.forEach(div => div.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
     }
   </script>
 </body>
