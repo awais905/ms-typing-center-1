@@ -2,106 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - MS Typing Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - MS Typing Center | Visa & Documentation Experts</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Learn more about MS Typing Center, your trusted partner for visa and documentation services in Dubai. Fast, reliable, and professional support.">
+  <meta name="keywords" content="MS Typing Center, Visa Services Dubai, Documentation Dubai, Emirates ID, Dubai Typing Services">
+  <meta name="author" content="MS Typing Center">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="About Us - MS Typing Center" />
+  <meta property="og:description" content="MS Typing Center offers reliable and fast visa and documentation services in Dubai. Visit us to learn more." />
+  <meta property="og:image" content="https://yourdomain.com/images/logo.png" />
+  <meta property="og:url" content="https://yourdomain.com/about.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #111;
-      color: #eee;
-    }
-
-    header {
-      background-color: #222;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #00c3ff;
-    }
-
-    .lang-select {
-      padding: 5px;
-      background-color: #333;
-      color: #fff;
-      border: 1px solid #555;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #1b1b1b;
-      border-radius: 10px;
-    }
-
-    h1 {
-      color: #00c3ff;
-    }
-
-    .lang-section {
-      display: none;
-    }
-
-    .lang-section.active {
-      display: block;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar">
+      <div class="logo">MS Typing Center</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <select id="languageSwitcher" class="language-switcher">
+        <option value="en">English</option>
+        <option value="ur">اردو</option>
+        <option value="ar">العربية</option>
+      </select>
     </nav>
-    <select class="lang-select" onchange="switchLang(this.value)">
-      <option value="en">English</option>
-      <option value="ur">اردو</option>
-      <option value="ar">العربية</option>
-    </select>
   </header>
 
-  <div class="container">
-    <!-- English -->
-    <div id="en" class="lang-section active">
-      <h1>About MS Typing Center</h1>
-      <p>MS Typing Center is a leading typing and visa services company offering reliable solutions including visa processing, Emirates ID typing, WPS, Ejari, and more. We pride ourselves on professionalism and excellent customer service across all Emirates.</p>
-    </div>
+  <main class="container">
+    <section id="aboutSection">
+      <h1 data-en="About Us" data-ur="ہمارے بارے میں" data-ar="معلومات عنا">About Us</h1>
+      <p data-en="We are a professional typing and visa service center based in Dubai, committed to helping you with Emirates ID, visa renewal, and all types of legal documentation." 
+         data-ur="ہم دبئی میں ایک پیشہ ور ٹائپنگ اور ویزا سروس سینٹر ہیں جو امارات آئی ڈی، ویزا کی تجدید، اور تمام قسم کی قانونی دستاویزات میں آپ کی مدد کے لیے پرعزم ہیں۔" 
+         data-ar="نحن مركز خدمات الطباعة والتأشيرات محترف في دبي ملتزمون بمساعدتك في هوية الإمارات وتجديد التأشيرات وجميع أنواع الوثائق القانونية.">
+         We are a professional typing and visa service center based in Dubai...
+      </p>
+    </section>
+  </main>
 
-    <!-- Urdu -->
-    <div id="ur" class="lang-section">
-      <h1>ایم ایس ٹائپنگ سینٹر کے بارے میں</h1>
-      <p>ایم ایس ٹائپنگ سینٹر ایک معروف ادارہ ہے جو ویزا پراسیسنگ، ایمریٹس آئی ڈی ٹائپنگ، اجاری، اور دیگر سروسز فراہم کرتا ہے۔ ہم تمام امارات میں بہترین سروسز کے ساتھ کام کر رہے ہیں۔</p>
-    </div>
-
-    <!-- Arabic -->
-    <div id="ar" class="lang-section">
-      <h1>حول مركز إم إس للطباعة</h1>
-      <p>مركز إم إس للطباعة هو شركة رائدة تقدم خدمات تأشيرات وهوية الإمارات والإيجاري وغيرها. نحن ملتزمون بتقديم أفضل خدمة في جميع الإمارات.</p>
-    </div>
-  </div>
+  <footer class="footer">
+    <p>&copy; 2025 MS Typing Center. All rights reserved.</p>
+  </footer>
 
   <script>
-    function switchLang(lang) {
-      document.querySelectorAll('.lang-section').forEach(section => {
-        section.classList.remove('active');
+    const switcher = document.getElementById("languageSwitcher");
+    switcher.addEventListener("change", () => {
+      const lang = switcher.value;
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
       });
-      document.getElementById(lang).classList.add('active');
-    }
+    });
   </script>
 </body>
 </html>
