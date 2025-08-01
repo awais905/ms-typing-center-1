@@ -2,125 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | MS Typing Center</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: #ffffff;
-    }
-    header {
-      background-color: #1a1a1a;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-    nav a {
-      color: #ffcc00;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-    .language-switcher {
-      background-color: #1a1a1a;
-      color: white;
-      border: 1px solid #ffcc00;
-      padding: 0.4rem;
-      font-size: 1rem;
-    }
-    h1, h2 {
-      text-align: center;
-      color: #ffcc00;
-    }
-    .contact-info, .contact-form, iframe {
-      max-width: 600px;
-      margin: 1rem auto;
-      background-color: #1f1f1f;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 0.7rem;
-      margin-top: 0.5rem;
-      background-color: #0d0d0d;
-      border: 1px solid #444;
-      color: #fff;
-    }
-    .contact-form button {
-      padding: 0.6rem 1rem;
-      background-color: #ffcc00;
-      border: none;
-      cursor: pointer;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-    .contact-links a {
-      display: block;
-      color: #00bfff;
-      margin: 0.5rem 0;
-      word-break: break-word;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - MS Typing Center | Dubai Documentation Services</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Contact MS Typing Center in Dubai for visa services, Emirates ID, legal documentation and business setup assistance. Reach us via phone, email or visit our office.">
+  <meta name="keywords" content="Contact MS Typing Center, Visa Help Dubai, Emirates ID, Dubai Typing Center, Office Location, Call Typing Center">
+  <meta name="author" content="MS Typing Center">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Contact Us - MS Typing Center" />
+  <meta property="og:description" content="Get in touch with MS Typing Center for expert assistance on all your documentation needs in Dubai." />
+  <meta property="og:image" content="https://yourdomain.com/images/logo.png" />
+  <meta property="og:url" content="https://yourdomain.com/contact.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div style="color:#ffcc00; font-size:1.5rem;">MS Typing Center</div>
-    <nav>
-      <a href="index.html" data-en="Home" data-ur="ہوم" data-ar="الصفحة الرئيسية">Home</a>
-      <a href="about.html" data-en="About" data-ur="ہمارے بارے میں" data-ar="معلومات عنا">About</a>
-      <a href="services.html" data-en="Services" data-ur="خدمات" data-ar="الخدمات">Services</a>
-      <a href="contact.html" data-en="Contact" data-ur="رابطہ" data-ar="اتصال">Contact</a>
+    <nav class="navbar">
+      <div class="logo">MS Typing Center</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <select id="languageSwitcher" class="language-switcher">
+        <option value="en">English</option>
+        <option value="ur">اردو</option>
+        <option value="ar">العربية</option>
+      </select>
     </nav>
-    <select class="language-switcher" onchange="switchLanguage(this.value)">
-      <option value="en">English</option>
-      <option value="ur">اردو</option>
-      <option value="ar">العربية</option>
-    </select>
   </header>
 
-  <h1 data-en="Contact Us" data-ur="ہم سے رابطہ کریں" data-ar="اتصل بنا">Contact Us</h1>
+  <main class="container">
+    <section id="contactSection">
+      <h1 data-en="Contact Us" data-ur="ہم سے رابطہ کریں" data-ar="اتصل بنا">Contact Us</h1>
+      <p data-en="Reach out to us via any of the methods below. We’re happy to assist!" 
+         data-ur="نیچے دیے گئے طریقوں سے ہم سے رابطہ کریں۔ ہم خوشی سے مدد کریں گے!"
+         data-ar="تواصل معنا بأي من الطرق أدناه. يسعدنا مساعدتك!">
+        Reach out to us via any of the methods below. We’re happy to assist!
+      </p>
 
-  <div class="contact-info">
-    <h2 data-en="Get in Touch" data-ur="رابطہ کریں" data-ar="تواصل معنا">Get in Touch</h2>
-    <div class="contact-links">
-      <a href="tel:+971567906759" data-en="Call: 0567906759" data-ur="کال: 0567906759" data-ar="اتصال: 0567906759">Call: 0567906759</a>
-      <a href="https://wa.me/971567906759" target="_blank" data-en="WhatsApp: +971 56 790 6759" data-ur="واٹس ایپ: +971 56 790 6759" data-ar="واتساب: +971 56 790 6759">WhatsApp: +971 56 790 6759</a>
-      <a href="mailto:junaidazizmstyping2@gmail.com" data-en="Email: junaidazizmstyping2@gmail.com" data-ur="ای میل: junaidazizmstyping2@gmail.com" data-ar="البريد الإلكتروني: junaidazizmstyping2@gmail.com">Email: junaidazizmstyping2@gmail.com</a>
-    </div>
-  </div>
+      <ul class="contact-list">
+        <li data-en="📞 Phone: +971-XXXXXXXXX" 
+            data-ur="📞 فون: +971-XXXXXXXXX" 
+            data-ar="📞 الهاتف: +971-XXXXXXXXX">📞 Phone: +971-XXXXXXXXX</li>
+        <li data-en="📧 Email: info@mstypingcenter.com" 
+            data-ur="📧 ای میل: info@mstypingcenter.com" 
+            data-ar="📧 البريد الإلكتروني: info@mstypingcenter.com">📧 Email: info@mstypingcenter.com</li>
+        <li data-en="📍 Location: Dubai, UAE" 
+            data-ur="📍 مقام: دبئی، متحدہ عرب امارات" 
+            data-ar="📍 الموقع: دبي، الإمارات العربية المتحدة">📍 Location: Dubai, UAE</li>
+        <li data-en="🕘 Office Hours: 9:00 AM – 9:00 PM" 
+            data-ur="🕘 دفتری اوقات: صبح 9 بجے – رات 9 بجے" 
+            data-ar="🕘 ساعات العمل: 9:00 صباحًا – 9:00 مساءً">🕘 Office Hours: 9:00 AM – 9:00 PM</li>
+      </ul>
 
-  <div class="contact-form">
-    <h2 data-en="Send a Message" data-ur="پیغام بھیجیں" data-ar="أرسل رسالة">Send a Message</h2>
-    <form>
-      <label data-en="Name" data-ur="نام" data-ar="الاسم">Name</label>
-      <input type="text" placeholder="Your Name" />
-      <label data-en="Email" data-ur="ای میل" data-ar="البريد الإلكتروني">Email</label>
-      <input type="email" placeholder="Your Email" />
-      <label data-en="Message" data-ur="پیغام" data-ar="رسالة">Message</label>
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button type="submit" data-en="Send" data-ur="ارسال کریں" data-ar="إرسال">Send</button>
-    </form>
-  </div>
+      <form class="contact-form">
+        <h2 data-en="Send Us a Message" data-ur="ہمیں پیغام بھیجیں" data-ar="أرسل لنا رسالة">Send Us a Message</h2>
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Phone" required />
+        <textarea placeholder="Your message here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
 
-  <iframe
-    src="https://www.google.com/maps?q=Al%20Qusais%20Industrial%20AreaAl%20-%2079VV+86W%20-%20%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B5%20%D9%85%D9%86%D8%B7%D9%82%D8%A9%20%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9%20-%20%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B5%20%D9%85%D9%86%D8%B7%D9%82%D8%A9%20%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9%20%D9%A3%20-%20%D8%AF%D8%A8%D9%8A%20-%20United%20Arab%20Emirates&output=embed"
-    width="100%"
-    height="400"
-    style="border:0; margin-top:1rem;"
-    allowfullscreen=""
-    loading="lazy"
-  ></iframe>
+  <footer class="footer">
+    <p>&copy; 2025 MS Typing Center. All rights reserved.</p>
+  </footer>
 
   <script>
-    function switchLanguage(lang) {
-      document.querySelectorAll("[data-en]").forEach((el) => {
+    const switcher = document.getElementById("languageSwitcher");
+    switcher.addEventListener("change", () => {
+      const lang = switcher.value;
+      document.querySelectorAll("[data-en]").forEach(el => {
         el.textContent = el.getAttribute(`data-${lang}`);
       });
-    }
+    });
   </script>
 </body>
 </html>
