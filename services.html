@@ -2,62 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services - MS Typing Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - MS Typing Center | Visa, Emirates ID & Documentation</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore professional services at MS Typing Center including visa assistance, Emirates ID processing, legal typing and more in Dubai.">
+  <meta name="keywords" content="Visa Services Dubai, Emirates ID, Typing Center, MS Typing Center, Dubai Documentation, Legal Typing">
+  <meta name="author" content="MS Typing Center">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Our Services - MS Typing Center" />
+  <meta property="og:description" content="Explore MS Typing Center's visa, Emirates ID, and legal documentation services in Dubai. We provide fast, reliable, and professional support." />
+  <meta property="og:image" content="https://yourdomain.com/images/logo.png" />
+  <meta property="og:url" content="https://yourdomain.com/services.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0e0e0e;
-      color: #f0f0f0;
-    }
-    header {
-      background-color: #1a1a1a;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: #f0f0f0;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: #ff9900;
-    }
-    .lang-selector {
-      background-color: #222;
-      color: #f0f0f0;
-      padding: 5px;
-      border: none;
-    }
-    .container {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h1 {
-      color: #ff9900;
-      text-align: center;
-    }
-    ul {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      padding-left: 20px;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <div><strong>MS Typing Center</strong></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <select class="lang-selector" onchange="changeLanguage(this.value)">
+    <nav class="navbar">
+      <div class="logo">MS Typing Center</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <select id="languageSwitcher" class="language-switcher">
         <option value="en">English</option>
         <option value="ur">اردو</option>
         <option value="ar">العربية</option>
@@ -65,69 +37,51 @@
     </nav>
   </header>
 
-  <div class="container">
-    <h1 id="title">Our Services</h1>
-    <ul id="servicesList">
-      <li>Visa Typing & Application Processing</li>
-      <li>Emirates ID & Medical Typing</li>
-      <li>Tasheel & Amer Services</li>
-      <li>Company Formation & PRO Services</li>
-      <li>Attestation & Document Clearance</li>
-      <li>Translation and Notary Public Services</li>
-      <li>Immigration & Labour Department Services</li>
-    </ul>
-  </div>
+  <main class="container">
+    <section id="servicesSection">
+      <h1 data-en="Our Services" data-ur="ہماری خدمات" data-ar="خدماتنا">Our Services</h1>
+      <ul class="services-list">
+        <li data-en="✓ Visa Application & Renewal" 
+            data-ur="✓ ویزا کی درخواست اور تجدید" 
+            data-ar="✓ طلب وتجديد التأشيرات">
+          ✓ Visa Application & Renewal
+        </li>
+        <li data-en="✓ Emirates ID Processing" 
+            data-ur="✓ امارات آئی ڈی کی پروسیسنگ" 
+            data-ar="✓ معالجة بطاقة الهوية الإماراتية">
+          ✓ Emirates ID Processing
+        </li>
+        <li data-en="✓ Legal Documentation & Attestation" 
+            data-ur="✓ قانونی دستاویزات اور تصدیق" 
+            data-ar="✓ التوثيق القانوني وتصديق المستندات">
+          ✓ Legal Documentation & Attestation
+        </li>
+        <li data-en="✓ Labour, Immigration & Typing Services" 
+            data-ur="✓ لیبر، امیگریشن اور ٹائپنگ سروسز" 
+            data-ar="✓ خدمات العمل والهجرة والطباعة">
+          ✓ Labour, Immigration & Typing Services
+        </li>
+        <li data-en="✓ PRO Services & Business Setup Support" 
+            data-ur="✓ پی آر او خدمات اور کاروباری سیٹ اپ سپورٹ" 
+            data-ar="✓ خدمات العلاقات العامة ودعم تأسيس الأعمال">
+          ✓ PRO Services & Business Setup Support
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 MS Typing Center. All rights reserved.</p>
+  </footer>
 
   <script>
-    const content = {
-      en: {
-        title: "Our Services",
-        services: [
-          "Visa Typing & Application Processing",
-          "Emirates ID & Medical Typing",
-          "Tasheel & Amer Services",
-          "Company Formation & PRO Services",
-          "Attestation & Document Clearance",
-          "Translation and Notary Public Services",
-          "Immigration & Labour Department Services"
-        ]
-      },
-      ur: {
-        title: "ہماری خدمات",
-        services: [
-          "ویزا ٹائپنگ اور درخواست کی پروسیسنگ",
-          "ایمریٹس آئی ڈی اور میڈیکل ٹائپنگ",
-          "تسھیل اور عامر سروسز",
-          "کمپنی کی تشکیل اور PRO سروسز",
-          "تصدیق اور دستاویزات کی کلیئرنس",
-          "ترجمہ اور نوٹری پبلک سروسز",
-          "امیگریشن اور لیبر ڈیپارٹمنٹ کی خدمات"
-        ]
-      },
-      ar: {
-        title: "خدماتنا",
-        services: [
-          "طباعة التأشيرات ومعالجة الطلبات",
-          "طباعة الهوية الإماراتية والفحوصات الطبية",
-          "خدمات تسهيل وأمر",
-          "تأسيس الشركات وخدمات PRO",
-          "تصديق المستندات وتخليصها",
-          "الترجمة وخدمات كاتب العدل",
-          "خدمات الهجرة والعمل"
-        ]
-      }
-    };
-
-    function changeLanguage(lang) {
-      document.getElementById("title").innerText = content[lang].title;
-      const servicesList = document.getElementById("servicesList");
-      servicesList.innerHTML = "";
-      content[lang].services.forEach(service => {
-        const li = document.createElement("li");
-        li.textContent = service;
-        servicesList.appendChild(li);
+    const switcher = document.getElementById("languageSwitcher");
+    switcher.addEventListener("change", () => {
+      const lang = switcher.value;
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
       });
-    }
+    });
   </script>
 </body>
 </html>
