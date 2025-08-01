@@ -5,77 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MS Typing Center</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Dropdown styling */
-    .language-switcher {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .language-switcher select {
-      padding: 5px 10px;
-      border-radius: 5px;
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #ccc;
-    }
-
-    .language-switcher select:hover {
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
-  <!-- Language Switcher Dropdown -->
-  <div class="language-switcher">
-    <select onchange="changeLanguage(this.value)">
-      <option value="index.html">🇬🇧 English</option>
-      <option value="index-ur.html">🇵🇰 Urdu</option>
-      <option value="index-ar.html">🇸🇦 Arabic</option>
-    </select>
-  </div>
-
   <header>
-    <h1>MS Typing Center</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <a href="faq.html">FAQ</a>
-    </nav>
+    <div class="container">
+      <h1 class="logo">MS Typing Center</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <select class="language-switcher" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ur">اردو</option>
+          <option value="ar">العربية</option>
+        </select>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Your Trusted Partner for Visa & Typing Services</h2>
-      <p>Offering reliable documentation services across all Emirates.</p>
-    </section>
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome to MS Typing Center</h2>
+      <p>Your trusted partner for visa, PRO, and documentation services in the UAE.</p>
+      <a href="services.html" class="btn">Explore Services</a>
+    </div>
+  </section>
 
-    <section class="features">
-      <div class="feature">
-        <h3>Quick Processing</h3>
-        <p>We provide fast and efficient typing services.</p>
+  <section class="features">
+    <div class="container">
+      <div class="feature-box">
+        <h3>Visa & Emirates ID Services</h3>
+        <p>Complete support for new, renewal, and family visa typing and Emirates ID registration.</p>
       </div>
-      <div class="feature">
-        <h3>Expert Team</h3>
-        <p>Our staff is well-trained in handling all government paperwork.</p>
+      <div class="feature-box">
+        <h3>Company Setup & PRO</h3>
+        <p>New company formation, WPS services, Ejari registration, and all PRO solutions.</p>
       </div>
-      <div class="feature">
-        <h3>All Emirates Covered</h3>
-        <p>Serving Dubai, Sharjah, Abu Dhabi, Ajman, and more.</p>
+      <div class="feature-box">
+        <h3>Tasheel & Amer</h3>
+        <p>Efficient handling of government-related services through Tasheel and Amer platforms.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 MS Typing Center. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 MS Typing Center. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
     function changeLanguage(lang) {
-      window.location.href = lang;
+      // Placeholder for real language switch
+      alert("Language switched to: " + lang);
+      // Later, you can load separate HTML content or use i18n libraries.
     }
   </script>
 </body>
